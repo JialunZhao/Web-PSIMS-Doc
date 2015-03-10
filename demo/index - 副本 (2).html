@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>供销存系统DEMO</title>
+
+    <!-- Loading Bootstrap -->
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="./css/flatUI/flat-ui.min.css" rel="stylesheet">
+    <link href="./css/dashboard.css" rel="stylesheet">
+
+	
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="./js/vendor/html5shiv.js"></script>
+      <script src="./js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">供销存系统DEMO</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">设置</a></li>
+            <li><a href="#">用户</a></li>
+            <li><a href="#">帮助</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="#">客户管理</a></li>
+            <li><a href="#">供应商</a></li>
+            <li class="active"><a href="#">商品管理<span class="sr-only">(current)</span></a></li>
+            <li><a href="#">仓库管理</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="#">货品入库</a></li>
+            <li><a href="#">销售出库</a></li>
+            <li><a href="#">退货管理</a></li>
+            <li><a href="#">有效期调整</a></li>
+            <li><a href="#">销毁出库</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="#">回收物入库</a></li>
+            <li><a href="#">回收物出库</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="#">统计报表</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h3 class="page-header">商品管理</h3>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h5>商品1</h5>
+              <span class="text-muted">商品1</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h5>商品2</h5>
+              <span class="text-muted">商品2</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h5>商品3</h5>
+              <span class="text-muted">商品3</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h5>商品4</h5>
+              <span class="text-muted">商品4</span>
+            </div>
+          </div>
+
+          <h4 class="sub-header">商品清单</h4>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>商品编号</th>
+                  <th>商品名称</th>
+                  <th>商品类型</th>
+                  <th>商品价格</th>
+                  <th>供货商</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>百威金樽500ml</td>
+                  <td>酒水</td>
+                  <td>99</td>
+                  <td>供货商甲</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>听可乐330ml</td>
+                  <td>饮料</td>
+                  <td>42</td>
+                  <td>供货商乙</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>百威红瓶9.7度500ml</td>
+                  <td>酒水</td>
+                  <td>63</td>
+                  <td>供货商甲</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>小糊涂仙52度（250ml）</td>
+                  <td>酒水</td>
+                  <td>57</td>
+                  <td>供货商甲</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>酸梅汤原浆</td>
+                  <td>饮料</td>
+                  <td>198</td>
+                  <td>供货商丙</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+    <script src="./js/vendor/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/vendor/video.js"></script>
+    <script src="./js/flat-ui.min.js"></script>
+  </body>
+</html>
