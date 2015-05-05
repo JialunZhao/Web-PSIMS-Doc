@@ -1,6 +1,6 @@
-create database psims;
-use psims;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`psims` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
+use psims;
 drop table if exists tb_customer;
 
 drop table if exists tb_customer_log;
@@ -576,6 +576,7 @@ create table tb_menu
    menu_name            varchar(20),
    menu_status          varchar(20),
    menu_code            varchar(20),
+   menu_url             VARCHAR(50),
    remark               varchar(200),
    createtime           DATETIME,
    modifytime           DATETIME,
@@ -1051,7 +1052,12 @@ create table tb_system_parameter_log
 alter table tb_system_parameter_log comment '管理系统基本参数包括：库存缺货、积压、过期的提醒设置；
 回收类型（瓶子、瓶子盖）、基本单位（箱、瓶）、支付方';
 
+/*Data for the table `tb_menu` */
+
 insert  into `tb_menu`(`menu_id`,`menu_name`,`menu_status`,`menu_code`,`menu_url`,`remark`,`createtime`,`modifytime`,`endtime`,`priv`) values (1,'客户管理',NULL,NULL,'/customerController/customer.do',NULL,NULL,NULL,NULL,'客户管理.显示菜单'),(2,'供应商',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'供应商.显示菜单'),(3,'商品管理',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'商品管理.显示菜单'),(4,'仓库管理',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'仓库管理.显示菜单'),(5,'货品入库',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'商品入库.显示菜单'),(6,'销售出库',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'销售出库.显示菜单'),(7,'退货管理',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'退货管理.显示菜单'),(8,'有效期调整',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'有效期管理.显示菜单'),(9,'销毁出库',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'销毁出库.显示菜单'),(10,'回收物入库',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'回收物入库.显示菜单'),(11,'回收物出库',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'回收物出库.显示菜单'),(12,'统计报表',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'统计报表.显示菜单'),(13,'系统设置','01 ',NULL,'/sys/show.do',NULL,NULL,NULL,NULL,'系统设置.显示菜单'),(14,'员工权限','01 ',NULL,'/user/show.do',NULL,NULL,NULL,NULL,'员工权限.显示菜单');
 
+/*Data for the table `tb_privilege` */
 
-insert  into `tb_privilege`(`id`,`privilege`,`userId`) values (54,'系统设置.增删改,员工权限.增删改,客户管理.增删改,供应商.增删改,商品管理.增删改,仓库管理.增删改,商品入库.增删改,销售出库.增删改,退货管理.增删改,有效期管理.增删改,销毁出库.增删改,回收物入库.增删改,回收物出库.增删改,统计报表.增删改,系统设置.显示菜单,,员工权限.显示菜单,,客户管理.显示菜单,,供应商.显示菜单,,商品管理.显示菜单,,仓库管理.显示菜单,,商品入库.显示菜单,,销售出库.显示菜单,,退货管理.显示菜单,,有效期管理.显示菜单,,销毁出库.显示菜单,,回收物入库.显示菜单,,回收物出库.显示菜单,,统计报表.显示菜单',8),(57,'系统设置.显示菜单,,员工权限.显示菜单,,客户管理.显示菜单,,供应商.显示菜单,,商品管理.显示菜单,,仓库管理.显示菜单,,商品入库.显示菜单,,销售出库.显示菜单,,退货管理.显示菜单,,有效期管理.显示菜单,,销毁出库.显示菜单,,回收物入库.显示菜单,,回收物出库.显示菜单,,统计报表.显示菜单',72),(58,'系统设置.显示菜单,,员工权限.显示菜单,,客户管理.显示菜单,,供应商.显示菜单,,商品管理.显示菜单,,仓库管理.显示菜单,,商品入库.显示菜单,,销售出库.显示菜单,,退货管理.显示菜单,,有效期管理.显示菜单,,销毁出库.显示菜单,,回收物入库.显示菜单,,回收物出库.显示菜单,,统计报表.显示菜单',74),(59,'系统设置.增删改,员工权限.增删改,客户管理.增删改,供应商.增删改,商品管理.增删改,仓库管理.增删改,商品入库.增删改,销售出库.增删改,退货管理.增删改,有效期管理.增删改,销毁出库.增删改,回收物入库.增删改,回收物出库.增删改,统计报表.增删改,系统设置.显示菜单,,员工权限.显示菜单,,客户管理.显示菜单,,供应商.显示菜单,,商品管理.显示菜单,,仓库管理.显示菜单,,商品入库.显示菜单,,销售出库.显示菜单,,退货管理.显示菜单,,有效期管理.显示菜单,,销毁出库.显示菜单,,回收物入库.显示菜单,,回收物出库.显示菜单,,统计报表.显示菜单',1);
+insert  into `tb_privilege`(`id`,`user_id`,`privilege`,`createtime`,`modifytime`,`endtime`) values (1,'1','系统设置.增删改,员工权限.增删改,客户管理.增删改,供应商.增删改,商品管理.增删改,仓库管理.增删改,商品入库.增删改,销售出库.增删改,退货管理.增删改,有效期管理.增删改,销毁出库.增删改,回收物入库.增删改,回收物出库.增删改,统计报表.增删改,系统设置.显示菜单,,员工权限.显示菜单,,客户管理.显示菜单,,供应商.显示菜单,,商品管理.显示菜单,,仓库管理.显示菜单,,商品入库.显示菜单,,销售出库.显示菜单,,退货管理.显示菜单,,有效期管理.显示菜单,,销毁出库.显示菜单,,回收物入库.显示菜单,,回收物出库.显示菜单,,统计报表.显示菜单','2015-04-21 00:00:00','2015-04-21 00:00:00','2020-04-21 00:00:00');
+
+
