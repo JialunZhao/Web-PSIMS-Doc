@@ -1,5 +1,5 @@
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`psims` /*!40100 DEFAULT CHARACTER SET utf8 */;
-
+ 
 use psims;
 drop table if exists tb_customer;
 
